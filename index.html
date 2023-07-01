@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+        .text-green {
+            color: green;
+        }
+    </style>
 </head>
+
 <body>
 
-<div id="app">
-    <p>
-        <input type="text" v-model="greeting">
-    </p>
-    <p>
-        
-    </p>
-    {{ greeting }} ({{greeting.length}})
-</div>
+    <div id="app">
+        <button :class="buttonClasses" @click="toggle">Click Me</button>
+    </div>
 
-<script>
-    Vue.createApp({
-        data() {
-            return {
-                greeting: 'Hello World!'
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    buttonClasses: 'text-green'
+                }
+            },
+
+            methods:{
+                toggle(){
+                    this.buttonClasses = this.buttonClasses === 'text-green' ? 'text-red' : 'text-green';
+                }
             }
-        },
-
-        mounted(){
-            setTimeout(() => {
-                this.greeting = "changes";
-            }, 3000);
-        }
-    }).mount("#app");
-</script>
+        }).mount("#app");
+    </script>
 </body>
+
 </html>
