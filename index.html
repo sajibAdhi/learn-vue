@@ -4,44 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <!-- vue3 -->
     <script src="https://unpkg.com/vue@3"></script>
-    <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Css Only Loading Spinner -->
-    <style>
-        @keyframes spinner {
-            to {
-                transform: rotate(360deg);
-            }
-        }
 
-        .is-loading {
-            color: transparent;
-        }
-
-        .is-loading:before {
-            content: '';
-            box-sizing: border-box;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-            margin-left: -10px;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            border-top-color: #000;
-            animation: spinner .6s linear infinite;
-        }
-    </style>
 </head>
 
 <body class="h-full grid place-items-center">
-    <div id="app">
-        <app-button :processing="true">Submit</app-button>
-    </div>
+    <div id="app"></div>
 
 
 
