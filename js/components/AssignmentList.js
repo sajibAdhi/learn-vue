@@ -10,11 +10,10 @@ export default {
            <span>({{filteredAssignments.length}})</span>
        </h2>
        
-       <assignment-tags 
+        <assignment-tags 
+            v-model:currentTag="currentTag"
             :initial-tags="assignments.map(a => a.tags).flat()"
-            :current-tag="currentTag"
-            @change="currentTag = $event" 
-       />
+        />
     
        <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
               <assignment   
