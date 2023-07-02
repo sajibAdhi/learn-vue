@@ -9,14 +9,14 @@ export default {
         </form>
     `,
 
+    props: {
+        assignments: Array,
+    },
+
     data(){
         return {
             newAssignment: '',
         };
-    },
-
-    props: {
-        assignments: Array,
     },
 
     methods: {
