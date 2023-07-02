@@ -16,10 +16,10 @@ export default {
     data() {
         return {
             assignments: [
-                { id: 1, name: "Finish Project", complete: false },
-                { id: 2, name: "Read Chapter 4", complete: false },
-                { id: 3, name: "Clean Room", complete: false },
-                { id: 4, name: "Walk Dog", complete: false },
+                { id: 1, name: "Finish Project", complete: false , tags : ['science', 'math', 'english']},
+                { id: 2, name: "Read Chapter 4", complete: false, tags: ['science', 'math'] },
+                { id: 3, name: "Clean Room", complete: false, tags: ['science', 'english'] },
+                { id: 4, name: "Walk Dog", complete: false, tags: ['math'] },
             ],
         };
     },
