@@ -1,5 +1,6 @@
 import Assignment from './Assignment.js';
 import AssignmentTags from './AssignmentTags.js';
+
 export default {
     components: {Assignment, AssignmentTags},
     template: `
@@ -12,7 +13,7 @@ export default {
        
         <assignment-tags 
             v-model:currentTag="currentTag"
-            :initial-tags="assignments.map(a => a.tags).flat()"
+            :initial-tags="tags"
         />
     
        <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
@@ -32,13 +33,22 @@ export default {
 
     data() {
         return {
-            currentTag: 'all'
+            currentTag: 0,
+            tags: [],
         };
+    },
+
+    created() {
+        fetch('http://localhost:3001/tags')
+            .then(response => response.json())
+            .then(tags => {
+                this.tags = tags;
+            });
     },
 
     computed: {
         filteredAssignments() {
-            if (this.currentTag === 'all') {
+            if (this.currentTag === 0) {
                 return this.assignments;
             }
 

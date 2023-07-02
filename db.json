@@ -1,0 +1,68 @@
+{
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Finish Assignment 1",
+      "complete": false,
+      "tags": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Read Chapter 1",
+      "complete": false,
+      "tags": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Do Home Work 1",
+      "complete": false,
+      "tags": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Contact Group 1",
+      "complete": false,
+      "tags": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Assignment 5",
+      "complete": false,
+      "tags": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Learn Vue.js",
+      "complete": true,
+      "tags": [
+        3
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Homework"
+    },
+    {
+      "id": 2,
+      "name": "Project"
+    },
+    {
+      "id": 3,
+      "name": "Programming"
+    }
+  ]
+}
